@@ -24,14 +24,14 @@ function populateContent(jsonObj) {
         section.appendChild(myH1);
         var myPara = document.createElement('p');
         var link = document.createElement('a');
-        var imagen = document.createElement('img');
+        var image = document.createElement('img');
         var categories = document.createElement('p');
 
         link.href = jsonObj['data']['items'][x]['player']['default']
-        imagen.src = jsonObj['data']['items'][x]['thumbnail']['default'];
+        image.src = jsonObj['data']['items'][x]['thumbnail']['default'];
         categories.textContent = 'Categories: ' + jsonObj['data']['items'][x]['category'];
 
-        link.appendChild(imagen);
+        link.appendChild(image);
         section.appendChild(myPara);
         section.appendChild(link);
         section.appendChild(categories);
